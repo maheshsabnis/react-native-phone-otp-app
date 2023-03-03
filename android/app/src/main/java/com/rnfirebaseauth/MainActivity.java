@@ -1,4 +1,4 @@
-package com.rnfirebaseauth;
+package com.firebasephoneauth.msit;
 
 import android.os.Build;
 import android.os.Bundle;

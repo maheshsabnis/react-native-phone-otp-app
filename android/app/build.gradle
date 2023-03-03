@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
+apply plugin: 'com.google.gms.google-services'
 
 import com.android.build.OutputFile
 
@@ -113,9 +114,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.rnfirebaseauth"
+    namespace "com.firebasephoneauth.msit"
     defaultConfig {
-        applicationId "com.rnfirebaseauth"
+        applicationId "com.firebasephoneauth.msit"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -191,7 +192,8 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
-
+    implementation platform('com.google.firebase:firebase-bom:31.2.3')
+    implementation('com.google.firebase:firebase-auth')
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true";
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true";
     def isWebpAnimatedEnabled = (findProperty('expo.webp.animated') ?: "") == "true";
@@ -230,6 +232,8 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+    // Add this line
+    implementation "androidx.browser:browser:1.2.0"
 }
 
 apply from: new File(["node", "--print", "require.resolve('@react-native-community/cli-platform-android/package.json')"].execute(null, rootDir).text.trim(), "../native_modules.gradle");
