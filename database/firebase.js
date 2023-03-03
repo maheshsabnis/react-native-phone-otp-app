@@ -3,13 +3,13 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 const firebaseConfig = {
-    apiKey: "AIzaSyBimeTQh23UgM-UxwuERy2lmYfF70RDze0",
-    authDomain: "expoauthnative.firebaseapp.com",
-    databaseURL: "https://expoauthnative.firebaseapp.com",
-    projectId: "expoauthnative",
-    storageBucket: "expoauthnative.appspot.com",
-    messagingSenderId: "668372233678",
-    appId: "1:668372233678:web:d47035daff047f6c37cf9f"
+    apiKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    authDomain: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    databaseURL: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    projectId: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    storageBucket: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    messagingSenderId: "00000000000000000000000",
+    appId: "1:00000000000000:web:d647849993939393"
 };
 // 1. Initialize the APplication based on Configuration
 const app = initializeApp(firebaseConfig);
